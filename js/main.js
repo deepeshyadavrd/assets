@@ -4,7 +4,6 @@ $(document).ready(function()
     $(".owl-carousel").each(function(){
         $(this).owlCarousel({
             center:true,
-            
             loop:true,
             margin:10,
             navText: ['<i class="bx bx-chevron-left"></i>','<i class="bx bx-chevron-right"></i>'],
@@ -31,302 +30,6 @@ $(document).ready(function()
             }
         });
       });
-   
-//         if($('.bbb-slider1').length)
-//         {
-//             var trendsSlider = $('.bbb-slider1');
-//             trendsSlider.owlCarousel(
-//             {
-//                 loop:true,
-//                 margin:10,
-//                 nav:false,
-//                 dots:false,
-//                 autoplayHoverPause:true,
-//                 autoplay:true,
-//                 responsive:
-//                 {
-//                     0:{items:2},
-//                     575:{items:2},
-//                     630:{items:2},
-//                     768:{items:3},
-//                     991:{items:2},
-//                     1010:{items:2},
-//                      1200:{items:3}
-//                 }
-//             });
-
-//             trendsSlider.on('click', '.bbb_fav', function (ev)
-//             {
-//                 $(ev.target).toggleClass('active');
-//             });
-// //first slider
-
-//             if($('.bbb_prev1').length)
-//             {
-//                 var prev = $('.bbb_prev1');
-//                 prev.on('click', function()
-//                 {
-//                     trendsSlider.trigger('prev.owl.carousel');
-//                 });
-//             }
-
-//             if($('.bbb_next1').length)
-//             {
-//                 var next = $('.bbb_next1');
-//                 next.on('click', function()
-//                 {
-//                     trendsSlider.trigger('next.owl.carousel');
-//                 });
-//             }
-//         }
-    
-
-    });
-
-
-//     $(document).ready(function()
-// {
-
-   
-//         if($('.bbb_slider2').length)
-//         {
-//             var trendsSlider = $('.bbb_slider2');
-//             trendsSlider.owlCarousel(
-//             {
-//                 loop:true,
-//                 margin:10,
-//                 nav:false,
-//                 dots:false,
-//                 autoplayHoverPause:true,
-//                 autoplay:true,
-//                 responsive:
-//                 {
-//                     0:{items:2},
-//                     575:{items:2},
-//                     630:{items:2},
-//                     768:{items:3},
-//                     800:{items:3},
-//                     992:{items:2},
-//                     1010:{items:2},
-//                      1200:{items:3}
-//                 }
-//             });
-
-//             trendsSlider.on('click', '.bbb_fav', function (ev)
-//             {
-//                 $(ev.target).toggleClass('active');
-//             });
-// //second slider
-
-//             if($('.bbb_prev2').length)
-//             {
-//                 var prev = $('.bbb_prev2');
-//                 prev.on('click', function()
-//                 {
-//                     trendsSlider.trigger('prev.owl.carousel');
-//                 });
-//             }
-
-//             if($('.bbb_next2').length)
-//             {
-//                 var next = $('.bbb_next2');
-//                 next.on('click', function()
-//                 {
-//                     trendsSlider.trigger('next.owl.carousel');
-//                 });
-//             }
-//         }
-    
-
-//     });
-
-
-
-//         $(document).ready(function()
-// {
-
-   
-//         if($('.bbb_slider3').length)
-//         {
-//             var trendsSlider = $('.bbb_slider3');
-//             trendsSlider.owlCarousel(
-//             {
-//                 loop:true,
-//                 margin:10,
-//                 nav:false,
-//                 dots:false,
-//                 autoplayHoverPause:true,
-//                 autoplay:true,
-//                 responsive:
-//                 {
-//                     0:{items:2},
-//                     575:{items:2},
-//                     630:{items:2},
-//                     768:{items:3},
-//                     991:{items:2},
-//                     1010:{items:2},
-//                      1200:{items:3}
-                     
-//                 }
-//             });
-
-//             trendsSlider.on('click', '.bbb_fav', function (ev)
-//             {
-//                 $(ev.target).toggleClass('active');
-//             });
-// //third slider
-
-//             if($('.bbb_prev3').length)
-//             {
-//                 var prev = $('.bbb_prev3');
-//                 prev.on('click', function()
-//                 {
-//                     trendsSlider.trigger('prev.owl.carousel');
-//                 });
-//             }
-
-//             if($('.bbb_next3').length)
-//             {
-//                 var next = $('.bbb_next3');
-//                 next.on('click', function()
-//                 {
-//                     trendsSlider.trigger('next.owl.carousel');
-//                 });
-//             }
-//         }
-    
-
-//     });
- 
-
-
-// $(document).ready(function()
-// {
-
-   
-//         if($('.bbb_slider4').length)
-//         {
-//             var trendsSlider = $('.bbb_slider4');
-//             trendsSlider.owlCarousel(
-//             {
-//                 loop:true,
-//                 margin:10,
-//                 nav:false,
-//                 dots:false,
-//                 autoplayHoverPause:true,
-//                 responsive:
-//                 {
-//                     0:{items:2,
-//                         stagePadding: 20},
-//                     480:{items:2,
-//                         stagePadding: 20},
-//                     575:{items:2,
-//                         stagePadding: 20},
-//                     630:{items:2,
-//                         stagePadding: 20},
-//                     768:{items:3,
-//                         stagePadding: 30},
-//                     992:{items:3,
-//                         stagePadding: 30},
-//                     1010:{items:3,
-//                         stagePadding: 30},
-//                      1200:{items:4,
-//                         stagePadding: 30}
-//                 }
-//             });
-
-//             trendsSlider.on('click', '.bbb_fav', function (ev)
-//             {
-//                 $(ev.target).toggleClass('active');
-//             });
-// //fourth slider
-
-//             if($('.bbb_prev4').length)
-//             {
-//                 var prev = $('.bbb_prev4');
-//                 prev.on('click', function()
-//                 {
-//                     trendsSlider.trigger('prev.owl.carousel');
-//                 });
-//             }
-
-//             if($('.bbb_next4').length)
-//             {
-//                 var next = $('.bbb_next4');
-//                 next.on('click', function()
-//                 {
-//                     trendsSlider.trigger('next.owl.carousel');
-//                 });
-//             }
-//         }
-    
-
-//     });
-
-
-    // $(document).ready(function()
-    // {
-    
-       
-    //         if($('.bbb_slider5').length)
-    //         {
-    //             var trendsSlider = $('.bbb_slider5');
-    //             trendsSlider.owlCarousel(
-    //             {
-    //                 loop:true,
-    //                 margin:10,
-    //                 nav:false,
-    //                 dots:false,
-    //                 autoplayHoverPause:true,
-    //                 autoplay:true,
-    //                 responsive:
-    //                 {
-    //                     0:{items:2},
-    //                     575:{items:2},
-    //                     630:{items:2},
-    //                     768:{items:2},
-    //                     992:{items:2},
-    //                     1010:{items:2},
-    //                      1200:{items:2},
-    //                      1366:{items:3},
-    //                      1400:{items:3},
-    //                      1500:{items:3},
-    //                      1600:{items:3},
-    //                      1800:{items:4}
-
-    //                 }
-    //             });
-    
-    //             trendsSlider.on('click', '.bbb_fav', function (ev)
-    //             {
-    //                 $(ev.target).toggleClass('active');
-    //             });
-    // //fourth slider
-    
-    //             if($('.bbb_prev5').length)
-    //             {
-    //                 var prev = $('.bbb_prev5');
-    //                 prev.on('click', function()
-    //                 {
-    //                     trendsSlider.trigger('prev.owl.carousel');
-    //                 });
-    //             }
-    
-    //             if($('.bbb_next5').length)
-    //             {
-    //                 var next = $('.bbb_next5');
-    //                 next.on('click', function()
-    //                 {
-    //                     trendsSlider.trigger('next.owl.carousel');
-    //                 });
-    //             }
-    //         }
-        
-    
-    //     });
-
-
-
   //MultiCarousel
 
   $(document).ready(function () {
@@ -343,9 +46,6 @@ $(document).ready(function()
     });
 
     ResCarouselSize();
-
-
-
 
     $(window).resize(function () {
         ResCarouselSize();
@@ -436,9 +136,7 @@ $(document).ready(function()
 
 });
 
-
   //client story
-
    $(document).ready(function(){
     $('.customer-logos').slick({
         slidesToShow: 2,
@@ -471,11 +169,7 @@ $(document).ready(function()
         }]
     });
 });
-
-
-  
-  
-  
+ 
   //selcet dropdown of store by name 
   
   var x, i, j, l, ll, selElmnt, a, b, c;
@@ -580,8 +274,6 @@ $(document).ready(function()
         }, false)
       })
   })();
-
-
     
    //Talk To Our Furniture Expert  section 
 
@@ -620,24 +312,6 @@ $(document).ready(function(){
     });
 });
 
-
-
-    //eye check password script
-
-    // const togglePassword = document.querySelector('.togglePassword');
-    // const password = document.querySelector('.id_password');
-    
-    // togglePassword.addEventListener('click', function (e) {
-    //   // toggle the type attribute
-    //   const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    //   password.setAttribute('type', type);
-    //   // toggle the eye slash icon
-    //   this.classList.toggle('fa-eye-slash');
-    // });
-    
- 
-
-
 // top cuppon offer head 
 $(document).ready(function(){
   $(".close-offer").click(function(){
@@ -672,7 +346,6 @@ $(function() {
 
 });
 
-
   $(document).ready(function(){
     $(".dropdown").hover(            
         function() {
@@ -699,16 +372,12 @@ $(function() {
     });
 }); 
 
-
-
 //home slider 
 
 $(document).on("click", '[data-toggle="lightbox"]', function(event) {
   event.preventDefault();
   $(this).ekkoLightbox();
 });
-
- 
 
   //mobile bottom navigation bar code
 
@@ -732,9 +401,6 @@ document.addEventListener("click", e => {
   }
 })
 
-
-//mobile bottom navigation bar code end
-
 //mobile bottom navigation bar code
 
 const indicator = document.querySelector("[data-indicator]")
@@ -756,8 +422,3 @@ document.addEventListener("click", e => {
     anchor.classList.add("active2")
   }
 })
-
-//mobile bottom navigation bar code end
-
-
-
