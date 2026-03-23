@@ -273,7 +273,8 @@ var cart = {
 				if (json['success']) {
 					// $('#content').parent().before('<div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 					$('body').prepend('<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">  <div id="successToast" class="toast text-bg-success border-0" role="alert">    <div class="d-flex">      <div class="toast-body">        '+ json['success']+'      </div>      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>    </div>  </div></div>')
-
+					const toast = new bootstrap.Toast(document.getElementById('successToast'));
+  					toast.show();
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
 						$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
