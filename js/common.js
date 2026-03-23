@@ -272,7 +272,7 @@ var cart = {
 
 				if (json['success']) {
 					// $('#content').parent().before('<div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-					$('body').prepend('<div class="success-popup ">	<span class="warrning-svg">	<svg id="smile"		width="35" height="35" viewBox="0 0 41 41" fill="none">					  <path d="M16.2432 29.9911L16.5968 30.3439L16.95 29.9907L30.5886 16.352L30.9422 15.9985L30.5886 15.6449L27.7128 12.7691L27.3593 12.4156L27.0057 12.7691L16.592 23.1828L12.2699 18.8682L11.9158 18.5148L11.5626 18.869L8.69086 21.7489L8.33792 22.1028L8.69174 22.4558L16.2432 29.9911ZM0.823975 20.662C0.823975 9.72375 9.72375 0.823975 20.662 0.823975C31.6002 0.823975 40.5 9.72375 40.5 20.662C40.5 31.6002 31.6002 40.5 20.662 40.5C9.72375 40.5 0.823975 31.6002 0.823975 20.662Z" stroke="#33C300"/>  </svg>					</span>	<span class="warrning-text">   <p>' + json['success'] + '</p>	</span>;				  </div>')
+					$('body').prepend('<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">  <div id="successToast" class="toast text-bg-success border-0" role="alert">    <div class="d-flex">      <div class="toast-body">        '+ json['success']+'      </div>      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>    </div>  </div></div>')
 
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
