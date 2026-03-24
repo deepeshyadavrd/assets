@@ -248,7 +248,7 @@ $(document).ready(function() {
 
 // Cart add remove functions
 var cart = {
-	'add': function(product_id, quantity, mtw = 0) {
+	'add': function(product_id, quantity, mtw = 0,name,price) {
 		$.ajax({
 			url: '?route=checkout/cart/add',
 			type: 'post',
@@ -279,7 +279,28 @@ var cart = {
 					setTimeout(function () {
 						$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
 					}, 100);
+					gtag("event", "add_to_cart", {
+          				currency: "INR",
+          				value: price,
+          				items: [
+            					{
+              					item_id: product_id,
+              					item_name: name,
+              					item_brand: "Urbanwood",
+              					item_category: "Furniture",
+              					price: price,
+              					quantity: 1
+            					}
+          					]
+        				});
 
+        			fbq('track', 'AddToCart', {
+          				currency: 'INR',
+          				value: price,
+          				content_ids: product_id',
+          				content_type: 'product'
+        			});
+					getCartDataAndSendToNitro(product_id);
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
 
 					$('#cart > ul').load('?route=common/cart/info ul li');
@@ -490,7 +511,53 @@ $(document).delegate('.agree', 'click', function(e) {
 		}
 	});
 });
+function getCartDataAndSendToNitro(product_id = null) {
 
+    $.ajax({
+        url: 'index.php?route=checkout/cart',
+        type: 'get',
+        dataType: 'html',
+        success: function(response) {
+
+            // 🔥 Extract cart data from DOM (quick method)
+            let line_items = [];
+            let cart_value = 0;
+
+            $('#cart table tbody tr').each(function () {
+
+                const title = $(this).find('.text-left a').text().trim();
+                const quantity = parseInt($(this).find('input').val()) || 1;
+                const priceText = $(this).find('.text-right').last().text().replace(/[^0-9.]/g, '');
+                const price = parseFloat(priceText) || 0;
+
+                cart_value += price;
+
+                line_items.push({
+                    quantity: quantity,
+                    title: title,
+                    line_price: price,
+                    id: title, // fallback (OC doesn’t expose variant id easily)
+                    product_id: '', // optional
+                    image_url: '' // optional
+                });
+
+            });
+
+            const cart_data = {
+                cart_url: window.location.href,
+                product_id: product_id,
+                line_items: line_items,
+                cart_value: cart_value
+            };
+
+            console.log("Nitro Cart Data:", cart_data);
+
+            if (window.nitro) {
+                nitro.updatecart(cart_data);
+            }
+        }
+    });
+}
 // Autocomplete */
 (function($) {
 	$.fn.autocomplete = function(option) {
