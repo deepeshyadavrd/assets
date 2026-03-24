@@ -511,43 +511,19 @@ $(document).delegate('.agree', 'click', function(e) {
 		}
 	});
 });
-function getCartDataAndSendToNitro(product_id = null) {
+function sendNitroCart(product_id = null) {
 
     $.ajax({
-        url: 'index.php?route=checkout/cart',
+        url: 'index.php?route=checkout/cart/nitrocart',
         type: 'get',
-        dataType: 'html',
-        success: function(response) {
-
-            // 🔥 Extract cart data from DOM (quick method)
-            let line_items = [];
-            let cart_value = 0;
-
-            $('#cart table tbody tr').each(function () {
-
-                const title = $(this).find('.text-left a').text().trim();
-                const quantity = parseInt($(this).find('input').val()) || 1;
-                const priceText = $(this).find('.text-right').last().text().replace(/[^0-9.]/g, '');
-                const price = parseFloat(priceText) || 0;
-
-                cart_value += price;
-
-                line_items.push({
-                    quantity: quantity,
-                    title: title,
-                    line_price: price,
-                    id: title, // fallback (OC doesn’t expose variant id easily)
-                    product_id: '', // optional
-                    image_url: '' // optional
-                });
-
-            });
+        dataType: 'json',
+        success: function(res) {
 
             const cart_data = {
                 cart_url: window.location.href,
                 product_id: product_id,
-                line_items: line_items,
-                cart_value: cart_value
+                line_items: res.line_items || [],
+                cart_value: res.cart_value || 0
             };
 
             console.log("Nitro Cart Data:", cart_data);
