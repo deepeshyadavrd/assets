@@ -297,7 +297,7 @@ var cart = {
         			fbq('track', 'AddToCart', {
           				currency: 'INR',
           				value: price,
-          				content_ids: product_id',
+          				content_ids: product_id,
           				content_type: 'product'
         			});
 					getCartDataAndSendToNitro(product_id);
