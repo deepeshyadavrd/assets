@@ -300,7 +300,7 @@ var cart = {
           				content_ids: product_id,
           				content_type: 'product'
         			});
-					getCartDataAndSendToNitro(product_id);
+					sendNitroCart(product_id);
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
 
 					$('#cart > ul').load('?route=common/cart/info ul li');
